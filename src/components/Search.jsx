@@ -4,9 +4,9 @@ import '../stylesheets/search.css';
 const Search = ({ setSearchLocation }) => {
 
   const searchForLocation = e => {
-    e.preventDefault()
-    setSearchLocation(e.target.children[0].value)
-  }
+    e.preventDefault();
+    setSearchLocation(e.target.children[0].value);
+  };
 
   return (
 

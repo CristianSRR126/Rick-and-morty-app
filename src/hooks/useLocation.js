@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-const useLocation = (searchLocation) => {
+const useLocation = searchLocation => {
 
   const [location, setLocation] = useState();
   const [isBoolean, setIsBoolean] = useState(true);
@@ -9,6 +9,7 @@ const useLocation = (searchLocation) => {
   useEffect(() => {
 
     let locationNumber;
+
     if (searchLocation) {
       locationNumber = searchLocation;
     } else {
@@ -22,6 +23,7 @@ const useLocation = (searchLocation) => {
         setIsBoolean(false)
       })
       .catch(err => console.log(err))
+
   }, [searchLocation]);
 
   return { location, isBoolean }
