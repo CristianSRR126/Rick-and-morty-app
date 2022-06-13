@@ -1,0 +1,81 @@
+.resident {
+  background-color: #00ff0a;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  text-transform: capitalize;
+}
+
+img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+h1 {
+  margin: 10px;
+}
+
+ul {
+  text-align: start;
+  list-style: none;
+  margin: 15px;
+  font-size: 1.2em;
+}
+
+.status {
+  width: 90px;
+  height: 25px;
+  background-color: #000000;
+  color: #ffffff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50px;
+  left: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.Alive {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #00ff0a;
+  margin-right: 10px;
+}
+
+.Dead {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ff0000;
+  margin-right: 10px;
+}
+
+.unknown {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #808080;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 766px) {
+  ul {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 1.1em;
+  }
+  ul {
+    font-size: 1em;
+  }
+}

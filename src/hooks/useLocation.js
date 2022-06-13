@@ -1,0 +1,31 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+const useLocation = (searchLocation) => {
+
+  const [location, setLocation] = useState();
+  const [isBoolean, setIsBoolean] = useState(true);
+
+  useEffect(() => {
+
+    let locationNumber;
+    if (searchLocation) {
+      locationNumber = searchLocation;
+    } else {
+      locationNumber = Math.ceil(Math.random() * 126);
+    }
+
+    const URL = `https://rickandmortyapi.com/api/location/${locationNumber}`;
+    axios.get(URL)
+      .then(res => {
+        setLocation(res.data)
+        setIsBoolean(false)
+      })
+      .catch(err => console.log(err))
+  }, [searchLocation]);
+
+  return { location, isBoolean }
+
+};
+
+export default useLocation;
