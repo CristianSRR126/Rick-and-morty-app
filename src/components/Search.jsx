@@ -14,7 +14,7 @@ const Search = ({ setSearchLocation }) => {
       <div className='bar_search'>
         <div className='search'>
           <form onSubmit={searchForLocation}>
-            <input type='text' placeholder='Search for ID' />
+            <input type='text' placeholder='Search by ID' />
             <button>
               <i className='bi bi-search'></i>
             </button>
